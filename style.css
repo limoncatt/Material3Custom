@@ -1,0 +1,44 @@
+@font-face {
+    font-family: GoogleSans;
+    src: url(GoogleSans-VariableFont_GRAD,opsz,wght.ttf);
+}
+
+:root {
+    --inverse-surface:#27202e;
+    --primary:#4f3f7b;
+    --primary-container:#EADDFF;
+}
+
+html, body {
+    margin: 0.25rem;
+    background-color: var(--inverse-surface);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    max-width: 10rem;
+    justify-content: space-around
+}
+
+a {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0.1rem;
+    font-family: GoogleSans;
+    font-weight: 600;
+    color: var(--primary-container);
+    background-color: var(--primary);
+    padding: 24px;
+    border-radius: 8px;
+    word-break: break-all;
+    text-align: center;
+    transition: 150ms;
+    cursor: pointer;
+}
+
+a:hover{
+    background-color: var(--primary-container);
+    color: var(--primary);  
+}
