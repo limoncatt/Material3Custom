@@ -1,5 +1,6 @@
+const sidebar = document.querySelector('.sidebar');
+
 document.addEventListener('DOMContentLoaded', () => {
-    const sidebar = document.querySelector('.sidebar');
     if (sidebar && sidebar.children.length > 0) {
         const children = sidebar.children;
 
@@ -10,6 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         children[0].style.borderRadius = "28px 28px 8px 8px";
         children[children.length - 1].style.borderRadius = "8px 8px 28px 28px";
     }
+});
+
+sidebar.addEventListener('click', () => {
+    SwitchSideBar();
 });
 
 const homebutton = document.querySelector(".homebutton")
@@ -37,8 +42,6 @@ aboutmebutton.addEventListener('click', () => {
     showOnly('aboutmepage');
 })
 
-
-
 const showOnly = (className) => {
     const children = document.querySelectorAll('.contentpage > *');
 
@@ -50,5 +53,20 @@ const showOnly = (className) => {
         }
     });
 };
+
+const SwitchSideBar = () => {
+    const sidebarhidejs = document.querySelector(".sidebarholder")
+    const contentpagejs = document.querySelector(".contentpage")
+    sidebarhidejs.classList.toggle("sidebarhideclass");
+    contentpagejs.classList.toggle("sidebarhideclass");
+};
+
+SwitchSideBar();
+
+const mobilesidebartogglejs = document.querySelector(".mobilesidebartoggle")
+
+mobilesidebartogglejs.addEventListener('click', () => {
+    SwitchSideBar();
+});
 
 showOnly('homepage');
