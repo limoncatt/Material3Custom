@@ -4,15 +4,17 @@
 }
 
 :root {
+    --on-surface: #1D1B20;
     --inverse-surface:#27202e;
     --primary:#4f3f7b;
     --primary-container:#EADDFF;
+    --on-secondary-container: #4A4458;
 }
 
 html, body {
     user-select: none;
     margin: 0rem;
-    background-color: var(--inverse-surface);
+    background-color: var(--on-surface);
 }
 
 body{
@@ -61,7 +63,7 @@ a:hover{
 }
 
 .contentpage div{
-    background-color: var(--primary);
+    background-color: var(--inverse-surface);
     border-radius: 28px;
     padding: 2rem;
     padding-top: 0rem;
