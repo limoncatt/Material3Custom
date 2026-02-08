@@ -19,6 +19,13 @@ projectsbutton.addEventListener('click', () => {
     showOnly('projectspage');
 })
 
+const aboutmebutton = document.querySelector(".aboutmebutton")
+
+aboutmebutton.addEventListener('click', () => {
+    showOnly('aboutmepage');
+})
+
+
 
 const showOnly = (className) => {
     const children = document.querySelectorAll('.contentpage > *');
