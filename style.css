@@ -28,7 +28,7 @@ body{
     max-width: 10rem;
 }
 
-p {
+p, li {
     font-family: GoogleSans;
     font-weight: 600;
     color: var(--primary-container);
