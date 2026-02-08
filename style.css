@@ -35,6 +35,7 @@ p {
 }
 
 a {
+    display: inline-block;
     flex-direction: column;
     margin: 0.1rem;
     font-family: GoogleSans;
@@ -42,11 +43,16 @@ a {
     color: var(--primary-container);
     background-color: var(--primary);
     padding: 24px;
-    border-radius: 8px;
+    border-radius: 24px;
     text-align: center;  
     transition: 150ms;
     cursor: pointer;
     text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    box-sizing: border-box
 }
 
 a:hover{
@@ -67,6 +73,7 @@ a:hover{
     border-radius: 28px;
     padding: 2rem;
     padding-top: 0rem;
+    min-width: 0;
 }
 
 .hidden {

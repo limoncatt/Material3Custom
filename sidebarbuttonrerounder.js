@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
-    if (sidebar) {
+    if (sidebar && sidebar.children.length > 0) {
         const children = sidebar.children;
-            children[0].style.borderRadius = "28px 28px 8px 8px";
-            children[children.length - 1].style.borderRadius = "8px 8px 28px 28px";
+
+        for (let child of children) {
+            child.style.borderRadius = "8px";
+        }
+        
+        children[0].style.borderRadius = "28px 28px 8px 8px";
+        children[children.length - 1].style.borderRadius = "8px 8px 28px 28px";
     }
 });
 
@@ -19,10 +24,10 @@ projectsbutton.addEventListener('click', () => {
     showOnly('projectspage');
 })
 
-const projectsbutton = document.querySelector(".projectsbutton")
+const githubbutton = document.querySelector(".githubbutton")
 
-projectsbutton.addEventListener('click', () => {
-    showOnly('projectspage');
+githubbutton.addEventListener('click', () => {
+    showOnly('githubpage');
 })
 
 
