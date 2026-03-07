@@ -1,105 +1,63 @@
 @font-face {
-    font-family: GoogleSans;
-    src: url(GoogleSans-VariableFont_GRAD,opsz,wght.ttf);
+    font-family: GoogleSansFlex;
+    src: url(GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf);
 }
 
 :root {
-    --on-surface: #1D1B20;
-    --inverse-surface:#27202e;
-    --primary:#4f3f7b;
-    --primary-container:#EADDFF;
-    --on-secondary-container: #4A4458;
-}
+  --md-ref-typeface-brand: GoogleSansFlex;
+  --md-ref-typeface-plain: GoogleSansFlex;
 
-html, body {
-    user-select: none;
-    margin: 0rem;
-    background-color: var(--on-surface);
+  --md-sys-color-primary: rgb(228 183 243);
+  --md-sys-color-surface-tint: rgb(228 183 243);
+  --md-sys-color-on-primary: rgb(68 34 83);
+  --md-sys-color-primary-container: rgb(93 56 107);
+  --md-sys-color-on-primary-container: rgb(248 216 255);
+  --md-sys-color-secondary: rgb(227 183 244);
+  --md-sys-color-on-secondary: rgb(67 34 84);
+  --md-sys-color-secondary-container: rgb(91 57 108);
+  --md-sys-color-on-secondary-container: rgb(246 217 255);
+  --md-sys-color-tertiary: rgb(213 187 252);
+  --md-sys-color-on-tertiary: rgb(58 37 91);
+  --md-sys-color-tertiary-container: rgb(82 60 115);
+  --md-sys-color-on-tertiary-container: rgb(236 220 255);
+  --md-sys-color-error: rgb(255 180 171);
+  --md-sys-color-on-error: rgb(86 30 25);
+  --md-sys-color-error-container: rgb(115 51 45);
+  --md-sys-color-on-error-container: rgb(255 218 214);
+  --md-sys-color-background: rgb(22 18 23);
+  --md-sys-color-on-background: rgb(233 224 231);
+  --md-sys-color-surface: rgb(22 18 23);
+  --md-sys-color-on-surface: rgb(233 224 231);
+  --md-sys-color-surface-variant: rgb(76 68 77);
+  --md-sys-color-on-surface-variant: rgb(206 195 205);
+  --md-sys-color-outline: rgb(151 142 151);
+  --md-sys-color-outline-variant: rgb(76 68 77);
+  --md-sys-color-shadow: rgb(0 0 0);
+  --md-sys-color-scrim: rgb(0 0 0);
+  --md-sys-color-inverse-surface: rgb(233 224 231);
+  --md-sys-color-inverse-on-surface: rgb(52 47 52);
+  --md-sys-color-inverse-primary: rgb(118 80 132);
+  --md-sys-color-primary-fixed: rgb(248 216 255);
+  --md-sys-color-on-primary-fixed: rgb(45 10 60);
+  --md-sys-color-primary-fixed-dim: rgb(228 183 243);
+  --md-sys-color-on-primary-fixed-variant: rgb(93 56 107);
+  --md-sys-color-secondary-fixed: rgb(246 217 255);
+  --md-sys-color-on-secondary-fixed: rgb(45 11 62);
+  --md-sys-color-secondary-fixed-dim: rgb(227 183 244);
+  --md-sys-color-on-secondary-fixed-variant: rgb(91 57 108);
+  --md-sys-color-tertiary-fixed: rgb(236 220 255);
+  --md-sys-color-on-tertiary-fixed: rgb(37 14 69);
+  --md-sys-color-tertiary-fixed-dim: rgb(213 187 252);
+  --md-sys-color-on-tertiary-fixed-variant: rgb(82 60 115);
+  --md-sys-color-surface-dim: rgb(22 18 23);
+  --md-sys-color-surface-bright: rgb(61 55 61);
+  --md-sys-color-surface-container-lowest: rgb(17 13 18);
+  --md-sys-color-surface-container-low: rgb(31 26 31);
+  --md-sys-color-surface-container: rgb(35 30 35);
+  --md-sys-color-surface-container-high: rgb(45 40 46);
+  --md-sys-color-surface-container-highest: rgb(56 51 57);
 }
 
 body{
-    display: flex;
-}
-
-.sidebar {
-    margin: 1vh;
-    display: flex;
-    flex-direction: column;
-    max-width: 10rem;
-}
-
-p, li {
-    font-family: GoogleSans;
-    font-weight: 600;
-    color: var(--primary-container);
-}
-
-a {
-    display: inline-block;
-    flex-direction: column;
-    margin: 0.1rem;
-    font-family: GoogleSans;
-    font-weight: 600;
-    color: var(--primary-container);
-    background-color: var(--primary);
-    padding: 24px;
-    border-radius: 24px;
-    text-align: center;  
-    transition: 150ms;
-    cursor: pointer;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 100%;
-    box-sizing: border-box
-}
-
-a:hover{
-    background-color: var(--primary-container);
-    color: var(--primary);  
-}
-
-.contentpage{
-    margin: 1vh;
-    display: grid;
-    height: 98vh;
-    width: 100%;
-}
-
-.contentpage div{
-    background-color: var(--inverse-surface);
-    border-radius: 28px;
-    padding: 2rem;
-    padding-top: 0rem;
-    min-width: 0;
-}
-
-.hidden {
-    display: none;
-}
-
-.mobilesidebartoggle{
-    display: none;
-}
-
-@media only screen and (max-width: 500px) {
-  .sidebarhideclass {
-    display: none;
-  }
-  
-  .sidebar{
-    min-width: 96.5%;
-  }
-
-  .sidebarholder {
-    min-width: 100%;
-  }
-
-  .mobilesidebartoggle{
-    display: block;
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-  }
+    margin: 0;
 }

@@ -1,32 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+        {
+            "imports": {
+                "@material/web/": "https://esm.run/@material/web/"
+            }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mobilesidebartoggle">
-        <a>...</a>
-    </div>
-    <div class="sidebarholder sidebarstretchclass">
-        <div class="sidebar">
-            <a class="homebutton">
-                Home
-            </a>
-            <a class="projectsbutton">
-                Projects
-            </a>
-            <a class="githubbutton">
-                Github
-            </a>
-            <a class="aboutmebutton">
-                About me
-            </a>
-        </div>
-    </div>
-    <div class="contentpage sidebarhideclass">
+    <md-tabs id="PageTabsSwitcher">
+        <md-primary-tab data-action="home">Home</md-primary-tab>
+        <md-primary-tab data-action="projects">Projects</md-primary-tab>
+        <md-primary-tab data-action="github">Github</md-primary-tab>
+        <md-primary-tab data-action="aboutme">About Me</md-primary-tab>
+    </md-tabs>
+    <div class="contentpage">
+        
         <div class="homepage">
             <p style=" font-size: 2rem;">Home</p>
             <p>Nothing to see on this page.</p>
@@ -38,14 +35,10 @@
                     <p style=" font-size: 1.25rem;">Material 3 Expressive Custom (this website) [Personal Project used as a portfolio]</p>
                     <p>This project does not in any way meet the Material 3 Expressive design rules made up by google but it is meant to replicate material's behaviour and look like it directly even if not meeting the criteria.</p>
                 </li>
-            </ul>
-            <ul>
                 <li>
                     <p style=" font-size: 1.25rem;">Project South (Unreal Engine) [Cancelled]</p>
                     <p>Development started in early 2023 continuing into 2025 but cancelled in 2026 due to a LOT of broken, outdated, unoptimized and straight up spaghetti code.</p>
-                </li>
-            </ul>
-            <ul>
+                </li>         
                 <li>
                     <p style=" font-size: 1.25rem;">Project Material (Unreal Engine) [Prototyping phase]</p>
                     <p>Development started in January of 2026, a replacement for Project South, but based on an older version of Unreal Engine (5.4.4), is supposed to be a run-based singleplayer resource harvesting game something like R.E.P.O. by semiwork.</p>
@@ -54,15 +47,14 @@
         </div>
         <div class="githubpage">
             <p style="font-size: 2rem;">Github Page</p>
-            <a href="https://github.com/limoncatt" target="_blank">
+            <md-filled-button href="https://github.com/limoncatt" target="_blank">
                Redirect to my Github profile
-            </a>
+            </md-filled-button>
         </div>
         <div class="aboutmepage">
             <p style=" font-size: 2rem;">About me</p>
         </div>
     </div>
 </body>
-</html>
 
 <script src="main.js"></script>

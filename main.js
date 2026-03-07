@@ -1,47 +1,3 @@
-const sidebar = document.querySelector('.sidebar');
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (sidebar && sidebar.children.length > 0) {
-        const children = sidebar.children;
-
-        for (let child of children) {
-            child.style.borderRadius = "8px";
-        }
-        
-        children[0].style.borderRadius = "28px 28px 8px 8px";
-        children[children.length - 1].style.borderRadius = "8px 8px 28px 28px";
-    }
-});
-
-sidebar.addEventListener('click', () => {
-    SwitchSideBar();
-});
-
-const homebutton = document.querySelector(".homebutton")
-
-homebutton.addEventListener('click', () => {
-    showOnly('homepage');
-})
-
-const projectsbutton = document.querySelector(".projectsbutton")
-
-projectsbutton.addEventListener('click', () => {
-    showOnly('projectspage');
-})
-
-const githubbutton = document.querySelector(".githubbutton")
-
-githubbutton.addEventListener('click', () => {
-    showOnly('githubpage');
-})
-
-
-const aboutmebutton = document.querySelector(".aboutmebutton")
-
-aboutmebutton.addEventListener('click', () => {
-    showOnly('aboutmepage');
-})
-
 const showOnly = (className) => {
     const children = document.querySelectorAll('.contentpage > *');
 
@@ -54,19 +10,19 @@ const showOnly = (className) => {
     });
 };
 
-const SwitchSideBar = () => {
-    const sidebarhidejs = document.querySelector(".sidebarholder")
-    const contentpagejs = document.querySelector(".contentpage")
-    sidebarhidejs.classList.toggle("sidebarhideclass");
-    contentpagejs.classList.toggle("sidebarhideclass");
-};
-
-SwitchSideBar();
-
-const mobilesidebartogglejs = document.querySelector(".mobilesidebartoggle")
-
-mobilesidebartogglejs.addEventListener('click', () => {
-    SwitchSideBar();
-});
-
 showOnly('homepage');
+
+const SwitchPageTabs = document.querySelector('#PageTabsSwitcher');
+
+SwitchPageTabs.addEventListener('change', () => {
+  const action = SwitchPageTabs.activeTab.dataset.action;
+  
+  const actions = {
+    home: () => showOnly('homepage'),
+    projects: () => showOnly('projectspage'),
+    github: () => showOnly('githubpage'),
+    aboutme: () => showOnly('aboutmepage')
+  };
+
+  actions[action]?.(); 
+});
