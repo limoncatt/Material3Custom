@@ -60,4 +60,14 @@
 
 body{
     margin: 0;
+    background-color: var(--md-sys-color-background);
+}
+
+div{
+    font-family: GoogleSansFlex;
+    color: var(--md-sys-color-primary);
+}
+
+.contentpage{
+    margin: 1rem;
 }

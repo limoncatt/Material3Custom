@@ -1,10 +1,11 @@
 const showOnly = (className) => {
     const children = document.querySelectorAll('.contentpage > *');
 
-    children.forEach(child => {
+    children.forEach(async child => {
         if (child.classList.contains(className)) {
             child.style.display = '';
-        } else {
+        } 
+        else {
             child.style.display = 'none';
         }
     });
